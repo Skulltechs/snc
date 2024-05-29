@@ -26,14 +26,7 @@
             z-index: 1000;
         }
     </style>
-    <script>
-        function sendHeight() {
-            const height = document.body.scrollHeight;
-            window.parent.postMessage(height, '*');
-        }
-        window.onload = sendHeight;
-        window.onresize = sendHeight;
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script>
 </head>
 <body>
     <button class="tithely-give-btn" data-church-id="99516">DONATE TODAY!</button>
@@ -41,6 +34,9 @@
     <script>
         var config = {};
         var tw = create_tithely_widget(config);
+
+        // Send a message to parent to resize iframe
+        iFrameResize({ log: true });
     </script>
 </body>
 </html>
