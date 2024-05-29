@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        .tithely-give-btn {
+            background: black;
+            font-family: 'din-condensed-web';
+            font-style: normal;
+            border: none;
+            color: white;
+            padding: 7px 32px;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: .8px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <button class="tithely-give-btn" data-church-id="99516">DONATE TODAY!</button>
+    <script src="https://tithe.ly/widget/v2/give.js"></script>
+    <script>
+        var config = {};
+        var tw = create_tithely_widget(config);
+    </script>
+</body>
+</html>
