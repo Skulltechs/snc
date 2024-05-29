@@ -26,6 +26,14 @@
             z-index: 1000;
         }
     </style>
+    <script>
+        function sendHeight() {
+            const height = document.body.scrollHeight;
+            window.parent.postMessage(height, '*');
+        }
+        window.onload = sendHeight;
+        window.onresize = sendHeight;
+    </script>
 </head>
 <body>
     <button class="tithely-give-btn" data-church-id="99516">DONATE TODAY!</button>
